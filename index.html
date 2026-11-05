@@ -62,13 +62,26 @@
             font-weight: 600;
         }
 
+        /* 2단 그리드 레이아웃 (집계표 전용) */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;
+        }
+        @media (max-width: 768px) {
+            .summary-grid { grid-template-columns: 1fr; }
+        }
+
         /* 테이블 공통 스타일 */
         .table-responsive { width: 100%; overflow-x: auto; margin-bottom: 4px; }
         table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
-        th, td { border: 1px solid var(--border-color); padding: 11px 12px; }
+        th, td { border: 1px solid var(--border-color); padding: 10px 12px; }
         th { background: var(--th-bg); font-weight: 700; color: var(--secondary); white-space: nowrap; }
         td { background: #ffffff; vertical-align: middle; }
         .text-center { text-align: center; }
+        .text-right { text-align: right; }
+        .total-row { background: #f8fafc; font-weight: 700; }
+        .total-row td { background: #f1f5f9; color: var(--accent); }
 
         /* 배지 스타일 */
         .grade-badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
@@ -76,7 +89,7 @@
         .role-badge-qc { display: inline-block; background: #ecfdf5; color: #065f46; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
         .role-badge-eng { display: inline-block; background: #f1f5f9; color: #334155; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
 
-        /* 하단 정보 */
+        /* 하단 푸터 */
         .footer-info { text-align: center; font-size: 0.9rem; color: #64748b; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-color); }
     </style>
 </head>
@@ -90,16 +103,99 @@
         <div class="official-title">공학석사 · 건축기사 · 건축시공 고급 · 건축품질관리 고급</div>
         <div class="profile-desc">
             <p>• <strong>공인 자격 및 등급:</strong> 건설기술진흥법령 기준 건축시공 고급 및 건축품질관리 고급 기술인으로 공인 등록되어 있습니다.</p>
-            <p>• <strong>실무 및 공무 총괄:</strong> 15년 현장 바닥 골조 실무를 바탕으로 공공청사, 문화집회시설, 일반건축 현장의 현장대리인 및 품질관리 책임기술인 업무를 총괄합니다.</p>
+            <p>• <strong>실무 및 공무 총괄:</strong> 현장 바닥 골조 실무 기반과 공인 경력증명서상 현장대리인 및 품질관리 책임기술인 업무를 총괄합니다.</p>
             <p>• <strong>데이터 기반 기술 융합:</strong> 미국 PMI 정식 멤버십과 항공 드론 도면 중첩 분석 및 BIM·스마트 공정 관리 체계를 실무에 적용하고 있습니다.</p>
         </div>
     </div>
 
-    <!-- 1. 주요 프로젝트 수행 실적 (한국건설기술인협회 경력증명서 공인) -->
+    <!-- 1. 공인 참여기간 인정일수 집계 현황 (협회 증명서 제7쪽 원문 규격) -->
     <div class="section-box">
         <div class="section-title">
-            <span>주요 프로젝트 수행 실적 (공인 참여사업)</span>
-            <span class="badge-verified">한국건설기술인협회 공인 기술경력</span>
+            <span>공인 참여기간 인정일수 집계 현황</span>
+            <span class="badge-verified">한국건설기술인협회 증명서 원본 팩트</span>
+        </div>
+        <div class="summary-grid">
+            <!-- 직무/전문분야별 인정일수 -->
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="text-center" style="background: #e2e8f0; color: #0f172a;">직무 / 전문분야별 인정일</th>
+                        </tr>
+                        <tr>
+                            <th>구분 (직무 / 전문분야)</th>
+                            <th class="text-right" style="width: 35%;">인정일수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>건축 / 건축시공</td>
+                            <td class="text-right"><strong>159일</strong></td>
+                        </tr>
+                        <tr>
+                            <td>건축 / 건축품질관리</td>
+                            <td class="text-right"><strong>807일</strong></td>
+                        </tr>
+                        <tr>
+                            <td>건축 / (미기재)</td>
+                            <td class="text-right"><strong>108일</strong></td>
+                        </tr>
+                        <tr class="total-row">
+                            <td class="text-center">인정일수 합계</td>
+                            <td class="text-right"><strong>1,074일</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- 공사종류별 인정일수 -->
+            <div class="table-responsive">
+                <table>
+                    <thead>
+                        <tr>
+                            <th colspan="2" class="text-center" style="background: #e2e8f0; color: #0f172a;">공사종류별 인정일</th>
+                        </tr>
+                        <tr>
+                            <th>공사종류</th>
+                            <th class="text-right" style="width: 35%;">인정일수</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>공용청사, 업무시설(공공), 창고시설(창고)</td>
+                            <td class="text-right"><strong>62일</strong></td>
+                        </tr>
+                        <tr>
+                            <td>근린생활시설, 문화및집회시설</td>
+                            <td class="text-right"><strong>436일</strong></td>
+                        </tr>
+                        <tr>
+                            <td>문화및집회시설</td>
+                            <td class="text-right"><strong>371일</strong></td>
+                        </tr>
+                        <tr>
+                            <td>창고시설</td>
+                            <td class="text-right"><strong>131일</strong></td>
+                        </tr>
+                        <tr>
+                            <td>기타(미기재)</td>
+                            <td class="text-right"><strong>74일</strong></td>
+                        </tr>
+                        <tr class="total-row">
+                            <td class="text-center">인정일수 합계</td>
+                            <td class="text-right"><strong>1,074일</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- 2. 주요 프로젝트 세부 참여 내역 (증명서 제4~5쪽 공인 참여사업) -->
+    <div class="section-box">
+        <div class="section-title">
+            <span>주요 프로젝트 세부 참여 내역</span>
+            <span class="badge-verified">한국건설기술인협회 등록 기술경력</span>
         </div>
         <div class="table-responsive">
             <table>
@@ -107,9 +203,9 @@
                     <tr>
                         <th style="width: 28%;">사업명 (공사명)</th>
                         <th style="width: 14%;">발주자</th>
-                        <th style="width: 12%;">직무 / 분야</th>
-                        <th style="width: 13%;">책임정도 (역할)</th>
-                        <th style="width: 18%;">참여기간 (일수)</th>
+                        <th style="width: 13%;">직무 / 분야</th>
+                        <th style="width: 13%;">책임정도</th>
+                        <th style="width: 17%;">참여기간 (인정일)</th>
                         <th style="width: 15%;">공사종류 및 구조</th>
                     </tr>
                 </thead>
@@ -117,57 +213,57 @@
                     <tr>
                         <td><strong>청사시설현대화공사(건축토목조경)</strong></td>
                         <td>국립민속국악원</td>
-                        <td>건축 / 품질관리</td>
+                        <td>건축 / 건축품질관리</td>
                         <td class="text-center"><span class="role-badge-qc">품질관리자</span></td>
-                        <td>2022.02.23 ~ 2023.02.28 (371일)</td>
+                        <td>2022.02.23 ~ 2023.02.28<br><strong>(371일)</strong></td>
                         <td>문화및집회시설 (RC조)</td>
                     </tr>
                     <tr>
-                        <td><strong>장수읍사무소 창고 및 주차장 조성공사</strong></td>
+                        <td><strong>장수읍사무소 창고 및 주차장 조성공사(건축,토목,기계)</strong></td>
                         <td>장수군청</td>
                         <td>건축 / 건축시공</td>
                         <td class="text-center"><span class="role-badge-eng">참여기술인</span></td>
-                        <td>2024.04.30 ~ 2024.06.30 (62일)</td>
-                        <td>지하 RC, 지상 철골 (주차장)</td>
+                        <td>2024.04.30 ~ 2024.06.30<br><strong>(62일)</strong></td>
+                        <td>지하 RC, 지상 일반철골 (주차장)</td>
                     </tr>
                     <tr>
-                        <td><strong>장수읍사무소창고및주차장조성사업</strong></td>
+                        <td><strong>장수읍사무소창고및주차장조성사업(건축,토목,기계)</strong></td>
                         <td>전라북도 장수군</td>
                         <td>건축 / 건축시공</td>
                         <td class="text-center"><span class="role-badge-rep">현장대리인</span></td>
-                        <td>2024.07.12 ~ 2024.08.30 (50일)</td>
+                        <td>2024.07.12 ~ 2024.08.30<br><strong>(50일)</strong></td>
                         <td>창고시설 (건축·토목·기계)</td>
                     </tr>
                     <tr>
-                        <td><strong>장수읍사무소창고및주차장조성사업</strong></td>
+                        <td><strong>장수읍사무소창고및주차장조성사업(건축,토목,기계)</strong></td>
                         <td>전라북도 장수군</td>
-                        <td>건축 / 시공보수</td>
-                        <td class="text-center"><span class="role-badge-rep">현장대리인</span></td>
-                        <td>2024.08.31 ~ 2024.11.19 (81일)</td>
+                        <td>건축 / (미기재)</td>
+                        <td class="text-center"><span class="role-badge-eng">-</span></td>
+                        <td>2024.08.31 ~ 2024.11.19<br><strong>(81일)</strong></td>
                         <td>창고시설 (유지보수및보강)</td>
                     </tr>
                     <tr>
-                        <td><strong>변산반도 고사포자동차야영장 워케이션센터 조성</strong></td>
+                        <td><strong>2024년 변산반도 고사포자동차야영장 워케이션센터 조성공사(건축)</strong></td>
                         <td>변산반도국립공원</td>
                         <td>건축 / 건축시공</td>
                         <td class="text-center"><span class="role-badge-rep">현장대리인</span></td>
-                        <td>2024.11.20 ~ 2025.01.05 (47일)</td>
+                        <td>2024.11.20 ~ 2025.01.05<br><strong>(47일)</strong></td>
                         <td>공공 숙박·휴양시설</td>
                     </tr>
                     <tr>
                         <td><strong>남원축협조산동통합시설신축공사(건축공사)</strong></td>
                         <td>남원축산업협동조합</td>
-                        <td>건축 / 품질관리</td>
+                        <td>건축 / 건축품질관리</td>
                         <td class="text-center"><span class="role-badge-qc">품질관리자</span></td>
-                        <td>2025.07.01 ~ 2026.09.09 (436일)</td>
+                        <td>2025.07.01 ~ 2026.09.09<br><strong>(436일)</strong></td>
                         <td>근린생활·집회 (RC 및 철골조)</td>
                     </tr>
                     <tr>
                         <td><strong>남원축협조산동통합시설신축공사(건축공사)</strong></td>
                         <td>남원축산업협동조합</td>
-                        <td>건축 / 유지보수</td>
-                        <td class="text-center"><span class="role-badge-eng">유지보수/과장</span></td>
-                        <td>2026.09.10 ~ 2026.10.06 (27일)</td>
+                        <td>건축 / (미기재)</td>
+                        <td class="text-center"><span class="role-badge-eng">-</span></td>
+                        <td>2026.09.10 ~ 2026.10.06<br><strong>(27일)</strong></td>
                         <td>신축시설물 보수·보강</td>
                     </tr>
                 </tbody>
@@ -175,7 +271,7 @@
         </div>
     </div>
 
-    <!-- 2. 건설기술인 기술등급 (한국건설기술인협회) -->
+    <!-- 3. 건설기술인 기술등급 (건설기술진흥법) -->
     <div class="section-box">
         <div class="section-title">
             <span>건설기술인 공인 기술등급 (건설기술진흥법)</span>
@@ -215,7 +311,7 @@
         </div>
     </div>
 
-    <!-- 3. 국가기술자격 취득 실적 (한국산업인력공단) -->
+    <!-- 4. 국가기술자격 취득 실적 (한국산업인력공단) -->
     <div class="section-box">
         <div class="section-title">
             <span>국가기술자격 취득 실적</span>
@@ -279,7 +375,7 @@
         </div>
     </div>
 
-    <!-- 4. 학위 취득 현황 -->
+    <!-- 5. 학위 취득 현황 -->
     <div class="section-box">
         <div class="section-title">
             <span>학위 취득 현황 (Academic Degree)</span>
@@ -319,7 +415,7 @@
         </div>
     </div>
 
-    <!-- 5. 글로벌 인증 및 공공 연구자 등록 -->
+    <!-- 6. 글로벌 인증 및 공공 연구자 등록 -->
     <div class="section-box">
         <div class="section-title">
             <span>글로벌 인증 및 공공 연구자 등록</span>
@@ -353,7 +449,7 @@
         </div>
     </div>
 
-    <!-- 하단 푸터 -->
+    <!-- 푸터 -->
     <div class="footer-info">
         <p><strong>상주 거점:</strong> 전북특별자치도 남원시 (현장대리인 상주 및 인근 권역 기술용역 가능)</p>
         <p style="margin-top: 4px;">공공 입찰 기술인 배치, 현장대리인, 품질관리 책임기술인 협의</p>
@@ -363,29 +459,3 @@
 
 </body>
 </html>
-<!-- 핵심 역량 정량 요약 지표 (신설) -->
-    <div class="section-box" style="background: #f8fafc; border-left: 4px solid #1d4ed8;">
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; text-align: center;">
-            <div style="padding: 12px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px;">
-                <div style="font-size: 0.85rem; color: #64748b; font-weight: 600;">공인 품질관리 책임일수</div>
-                <div style="font-size: 1.4rem; color: #1e40af; font-weight: 800; margin-top: 4px;">807일 (2.2년)</div>
-                <div style="font-size: 0.75rem; color: #059669; margin-top: 2px;">국립민속국악원 / 남원축협</div>
-            </div>
-            <div style="padding: 12px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px;">
-                <div style="font-size: 0.85rem; color: #64748b; font-weight: 600;">공인 현장대리인 실적</div>
-                <div style="font-size: 1.4rem; color: #b45309; font-weight: 800; margin-top: 4px;">178일</div>
-                <div style="font-size: 0.75rem; color: #d97706; margin-top: 2px;">장수군청 / 변산반도국립공원</div>
-            </div>
-            <div style="padding: 12px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px;">
-                <div style="font-size: 0.85rem; color: #64748b; font-weight: 600;">현장 바닥 골조 실무</div>
-                <div style="font-size: 1.4rem; color: #0f172a; font-weight: 800; margin-top: 4px;">10년</div>
-                <div style="font-size: 0.75rem; color: #475569; margin-top: 2px;">구조체 형틀·철근·타설 총괄</div>
-            </div>
-            <div style="padding: 12px; background: #ffffff; border: 1px solid #cbd5e1; border-radius: 6px;">
-                <div style="font-size: 0.85rem; color: #64748b; font-weight: 600;">국가기술자격</div>
-                <div style="font-size: 1.4rem; color: #0369a1; font-weight: 800; margin-top: 4px;">총 6종 취득</div>
-                <div style="font-size: 0.75rem; color: #0284c7; margin-top: 2px;">건축기사 · 산업기사 외 4종</div>
-            </div>
-        </div>
-    </div>
-
