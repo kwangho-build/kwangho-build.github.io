@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>이광호 기술인 | 공인 자격 및 학위 실적 증명</title>
+    <title>이광호 기술인 | 공인 자격·학위 및 건설 프로젝트 수행 실적</title>
     <style>
         :root {
             --primary: #0f172a;
@@ -16,9 +16,9 @@
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Pretendard", "Segoe UI", Roboto, sans-serif; }
         body { background: var(--bg-page); color: var(--primary); line-height: 1.6; padding: 32px 16px; }
-        .container { max-width: 960px; margin: 0 auto; }
+        .container { max-width: 1040px; margin: 0 auto; }
 
-        /* 프로필 헤더 */
+        /* 프로필 상단 요약 카드 */
         .profile-card {
             background: var(--card-bg);
             border: 1px solid var(--border-color);
@@ -62,16 +62,21 @@
             font-weight: 600;
         }
 
-        /* 공문서 표준 테이블 */
+        /* 테이블 공통 스타일 */
         .table-responsive { width: 100%; overflow-x: auto; margin-bottom: 4px; }
         table { width: 100%; border-collapse: collapse; text-align: left; font-size: 0.88rem; }
-        th, td { border: 1px solid var(--border-color); padding: 12px 14px; }
+        th, td { border: 1px solid var(--border-color); padding: 11px 12px; }
         th { background: var(--th-bg); font-weight: 700; color: var(--secondary); white-space: nowrap; }
         td { background: #ffffff; vertical-align: middle; }
-        .grade-badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
-        .cert-badge { display: inline-block; background: #f1f5f9; color: #334155; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+        .text-center { text-align: center; }
 
-        /* 하단 푸터 */
+        /* 배지 스타일 */
+        .grade-badge { display: inline-block; background: #e0f2fe; color: #0369a1; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
+        .role-badge-rep { display: inline-block; background: #fef3c7; color: #92400e; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
+        .role-badge-qc { display: inline-block; background: #ecfdf5; color: #065f46; padding: 3px 8px; border-radius: 4px; font-weight: 700; }
+        .role-badge-eng { display: inline-block; background: #f1f5f9; color: #334155; padding: 3px 8px; border-radius: 4px; font-weight: 600; }
+
+        /* 하단 정보 */
         .footer-info { text-align: center; font-size: 0.9rem; color: #64748b; margin-top: 32px; padding-top: 20px; border-top: 1px solid var(--border-color); }
     </style>
 </head>
@@ -85,16 +90,96 @@
         <div class="official-title">공학석사 · 건축기사 · 건축시공 고급 · 건축품질관리 고급</div>
         <div class="profile-desc">
             <p>• <strong>공인 자격 및 등급:</strong> 건설기술진흥법령 기준 건축시공 고급 및 건축품질관리 고급 기술인으로 공인 등록되어 있습니다.</p>
-            <p>• <strong>실무 및 공무 총괄:</strong> 15년 현장 구조체 바닥 실무를 바탕으로 지자체 및 공공 현장의 배근·품질 검측, 인허가 준공 공무 및 현장대리인 업무를 총괄합니다.</p>
-            <p>• <strong>글로벌 표준 및 공학 분석:</strong> 미국 PMI 정식 멤버십과 항공 드론 도면 중첩 분석 및 BIM·공정관리 수료 역량을 기반으로 객관적 데이터 중심 관리를 완수합니다.</p>
+            <p>• <strong>실무 및 공무 총괄:</strong> 15년 현장 바닥 골조 실무를 바탕으로 공공청사, 문화집회시설, 일반건축 현장의 현장대리인 및 품질관리 책임기술인 업무를 총괄합니다.</p>
+            <p>• <strong>데이터 기반 기술 융합:</strong> 미국 PMI 정식 멤버십과 항공 드론 도면 중첩 분석 및 BIM·스마트 공정 관리 체계를 실무에 적용하고 있습니다.</p>
         </div>
     </div>
 
-    <!-- 1. 건설기술진흥법 공인 기술등급 (한국건설기술인협회) -->
+    <!-- 1. 주요 프로젝트 수행 실적 (한국건설기술인협회 경력증명서 공인) -->
     <div class="section-box">
         <div class="section-title">
-            <span>건설기술인 기술등급 (건설기술진흥법)</span>
-            <span class="badge-verified">한국건설기술인협회(KOCEA) 공인</span>
+            <span>주요 프로젝트 수행 실적 (공인 참여사업)</span>
+            <span class="badge-verified">한국건설기술인협회 공인 기술경력</span>
+        </div>
+        <div class="table-responsive">
+            <table>
+                <thead>
+                    <tr>
+                        <th style="width: 28%;">사업명 (공사명)</th>
+                        <th style="width: 14%;">발주자</th>
+                        <th style="width: 12%;">직무 / 분야</th>
+                        <th style="width: 13%;">책임정도 (역할)</th>
+                        <th style="width: 18%;">참여기간 (일수)</th>
+                        <th style="width: 15%;">공사종류 및 구조</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>청사시설현대화공사(건축토목조경)</strong></td>
+                        <td>국립민속국악원</td>
+                        <td>건축 / 품질관리</td>
+                        <td class="text-center"><span class="role-badge-qc">품질관리자</span></td>
+                        <td>2022.02.23 ~ 2023.02.28 (371일)</td>
+                        <td>문화및집회시설 (RC조)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>장수읍사무소 창고 및 주차장 조성공사</strong></td>
+                        <td>장수군청</td>
+                        <td>건축 / 건축시공</td>
+                        <td class="text-center"><span class="role-badge-eng">참여기술인</span></td>
+                        <td>2024.04.30 ~ 2024.06.30 (62일)</td>
+                        <td>지하 RC, 지상 철골 (주차장)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>장수읍사무소창고및주차장조성사업</strong></td>
+                        <td>전라북도 장수군</td>
+                        <td>건축 / 건축시공</td>
+                        <td class="text-center"><span class="role-badge-rep">현장대리인</span></td>
+                        <td>2024.07.12 ~ 2024.08.30 (50일)</td>
+                        <td>창고시설 (건축·토목·기계)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>장수읍사무소창고및주차장조성사업</strong></td>
+                        <td>전라북도 장수군</td>
+                        <td>건축 / 시공보수</td>
+                        <td class="text-center"><span class="role-badge-rep">현장대리인</span></td>
+                        <td>2024.08.31 ~ 2024.11.19 (81일)</td>
+                        <td>창고시설 (유지보수및보강)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>변산반도 고사포자동차야영장 워케이션센터 조성</strong></td>
+                        <td>변산반도국립공원</td>
+                        <td>건축 / 건축시공</td>
+                        <td class="text-center"><span class="role-badge-rep">현장대리인</span></td>
+                        <td>2024.11.20 ~ 2025.01.05 (47일)</td>
+                        <td>공공 숙박·휴양시설</td>
+                    </tr>
+                    <tr>
+                        <td><strong>남원축협조산동통합시설신축공사(건축공사)</strong></td>
+                        <td>남원축산업협동조합</td>
+                        <td>건축 / 품질관리</td>
+                        <td class="text-center"><span class="role-badge-qc">품질관리자</span></td>
+                        <td>2025.07.01 ~ 2026.09.09 (436일)</td>
+                        <td>근린생활·집회 (RC 및 철골조)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>남원축협조산동통합시설신축공사(건축공사)</strong></td>
+                        <td>남원축산업협동조합</td>
+                        <td>건축 / 유지보수</td>
+                        <td class="text-center"><span class="role-badge-eng">유지보수/과장</span></td>
+                        <td>2026.09.10 ~ 2026.10.06 (27일)</td>
+                        <td>신축시설물 보수·보강</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- 2. 건설기술인 기술등급 (한국건설기술인협회) -->
+    <div class="section-box">
+        <div class="section-title">
+            <span>건설기술인 공인 기술등급 (건설기술진흥법)</span>
+            <span class="badge-verified">한국건설기술인협회(KOCEA) 발행</span>
         </div>
         <div class="table-responsive">
             <table>
@@ -130,11 +215,11 @@
         </div>
     </div>
 
-    <!-- 2. 국가기술자격 취득 현황 (한국산업인력공단) -->
+    <!-- 3. 국가기술자격 취득 실적 (한국산업인력공단) -->
     <div class="section-box">
         <div class="section-title">
             <span>국가기술자격 취득 실적</span>
-            <span class="badge-verified">한국산업인력공단 발행</span>
+            <span class="badge-verified">한국산업인력공단 검정</span>
         </div>
         <div class="table-responsive">
             <table>
@@ -194,11 +279,11 @@
         </div>
     </div>
 
-    <!-- 3. 학위 취득 현황 -->
+    <!-- 4. 학위 취득 현황 -->
     <div class="section-box">
         <div class="section-title">
             <span>학위 취득 현황 (Academic Degree)</span>
-            <span class="badge-verified">학위증명서 기준</span>
+            <span class="badge-verified">공식 학위증명서 기준</span>
         </div>
         <div class="table-responsive">
             <table>
@@ -234,11 +319,11 @@
         </div>
     </div>
 
-    <!-- 4. 글로벌 인증 및 공공 연구자 등록 -->
+    <!-- 5. 글로벌 인증 및 공공 연구자 등록 -->
     <div class="section-box">
         <div class="section-title">
             <span>글로벌 인증 및 공공 연구자 등록</span>
-            <span class="badge-verified">공식 검증 코드</span>
+            <span class="badge-verified">공식 검증 식별코드</span>
         </div>
         <div class="table-responsive">
             <table>
@@ -255,20 +340,20 @@
                         <td><strong>PMI (미국 프로젝트관리협회)</strong></td>
                         <td>글로벌 정회원</td>
                         <td>Global Regular Member</td>
-                        <td><span class="cert-badge">정회원 인증</span></td>
+                        <td><span class="role-badge-eng">정회원 인증</span></td>
                     </tr>
                     <tr>
                         <td><strong>국가연구자정보(KRI) / ORCID</strong></td>
                         <td>공공 연구자 식별코드</td>
                         <td>0009-0000-6025-8888</td>
-                        <td><span class="cert-badge">등록 완료</span></td>
+                        <td><span class="role-badge-eng">등록 완료</span></td>
                     </tr>
                 </tbody>
             </table>
         </div>
     </div>
 
-    <!-- 하단 안내 -->
+    <!-- 하단 푸터 -->
     <div class="footer-info">
         <p><strong>상주 거점:</strong> 전북특별자치도 남원시 (현장대리인 상주 및 인근 권역 기술용역 가능)</p>
         <p style="margin-top: 4px;">공공 입찰 기술인 배치, 현장대리인, 품질관리 책임기술인 협의</p>
